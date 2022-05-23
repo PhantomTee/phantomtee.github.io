@@ -1,0 +1,442 @@
+*{
+    background: linear-gradient(to right,rgb(58, 51, 51) 0%, black 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+    padding: 0;
+    font-family:  'Raleway', sans-serif;
+}
+.navbar{
+    border: 1px solid rgb(192, 17, 52);
+    height: auto;
+    width: 100%;
+    background:rgb(192, 17, 52);
+    display: inline-flex;
+    position: fixed;
+    justify-content: flex-end;
+
+
+}
+.navbar nav ul li{
+    background: none;
+    font-size: 26px;
+    font-family: Raleway, sans-serif;
+    list-style-type: none;
+    
+    padding: auto;
+    width: 100px;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    height:59px;
+}
+.navbar nav ul {
+    background: none;
+    display: flex;
+}
+.navbar nav{
+    background: none;
+}
+.navbar nav ul li:hover{
+    background: rgb(21, 21, 71);
+    height: 60px;
+    width: 100px;
+}
+.container{
+    background-color: black;
+    height: 450px;
+    width: 100vw;
+    border:1px solid white
+}
+.one{
+    background:none;
+    height: 150px;
+    width: auto;
+    margin:auto;
+    color: white;
+    font-size: 60px;
+    margin-top: 150px;
+    border:1px;
+    margin-left: 230px;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.web{
+    color: rgb(190, 49, 68);
+    font-style: italic;
+    font-size: 28.8px;
+    background:none;
+    margin-left: 300px;
+    border:1px ;
+    margin-top: -100px;
+}
+.blue{
+    background: rgb(46, 46, 85);
+    height: 1600px;
+    width: 100%;
+
+}
+.these{
+    background:none;
+    padding-top: 100px;
+    font-size: 45px;
+    padding-left: 190px;
+    color:white;
+    font-family: Arial;
+}
+.picgrid{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 400px 400px 400px;
+    height: auto;
+    width: auto;
+    margin: auto;
+    margin-left: 90px;
+    border: 1px ;
+    background: none;
+    gap: 30px;
+}
+.p1{
+    height: 80px;
+    width: 100%;
+    background:  rgb(5, 17, 16);
+    border-radius: 10px;
+    color: white;
+    padding-top: 13px;
+    padding-left: 120px;
+    box-sizing: border-box;
+}
+.p2{
+    height: 80px;
+    width: 100%;
+    background:  rgb(5, 17, 16);
+    border-radius: 10px;
+    color: white;
+    padding-top: 13px;
+    padding-left: 110px;
+    box-sizing: border-box;
+}.p3{
+    height: 80px;
+    width: 100%;
+    background:  rgb(5, 17, 16);
+    border-radius: 10px;
+    color: white;
+    
+    padding-left: 120px;
+    box-sizing: border-box;
+}.p4{
+    height: 80px;
+    width: 100%;
+    background:  rgb(5, 17, 16);
+    border-radius: 10px;
+    color: white;
+    
+    padding-left: 100px;
+    box-sizing: border-box;
+}.p5{
+    height: 80px;
+    width: 100%;
+    background: rgb(5, 17, 16);
+    border-radius: 10px;
+    color: white;
+    
+    padding-left: 110px;
+    box-sizing: border-box;
+}.p6{
+    height: 80px;
+    width: 100%;
+    background: rgb(5, 17, 16);
+    border-radius: 10px;
+    color: white;
+    
+    padding-left: 120px;
+    box-sizing: border-box;
+}
+.picgrid1{
+    border-radius: 10px;
+    background:none;
+}
+.picgrid2{
+    border-radius: 10px;
+    background:none;
+}.picgrid3{
+    border-radius: 10px;
+    background:none;
+}.picgrid4{
+    border-radius: 10px;
+    background:none;
+}.picgrid5{
+    border-radius: 10px;
+    background:none;
+}.picgrid6{
+    border-radius: 10px;
+    background:none;
+}
+.p1:hover{
+    background:rgb(5, 17, 16);
+    padding-top: 17px;
+    
+}
+.p1:hover .tri{
+    visibility:hidden;
+}
+.p2:hover{
+    background:rgb(5, 17, 16);
+    color: red;
+    
+}
+.p2:hover .tri{
+    visibility:hidden;
+}
+.p3:hover{
+    background:rgb(5, 17, 16);
+    color: red;
+}
+.p3:hover .tri{
+    visibility:hidden;
+}
+.p4:hover{
+    background:rgb(5, 17, 16);
+    color: red;
+    padding: auto;
+}
+.p4:hover .tri{
+    visibility:hidden;
+}
+.p5:hover{
+    background:rgb(5, 17, 16);
+    color: red;
+}
+.p5:hover .tri{
+    visibility:hidden;
+}
+.p6:hover{
+    background:rgb(5, 17, 16);
+    color: red;
+}
+.p6:hover .tri{
+    visibility:hidden;
+}
+.pi1{
+    border-radius: 10px;
+    background:url(tribute.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+}
+.pi2{
+    border-radius: 10px;
+    background:url(success.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+}.pi3{
+    border-radius: 10px;
+    background:url(calc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+}.pi4{
+    border-radius: 10px;
+    background:url(map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+}.pi5{
+    border-radius: 10px;
+    background:url(wiki.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+}.pi6{
+    border-radius: 10px;
+    background:url(tic-tac-toe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+}
+.p1 a{
+    display:none;
+}
+.p1:hover a{
+    display:block;
+    color: rgb(240,240,240);
+    box-sizing: border-box;
+    position: relative;
+    background:none;
+    text-decoration: none;
+    padding-top: 13px;
+}
+.p1 span{
+    color:rgb(175, 47, 25);
+}
+.p2 a{
+    display:none;
+}
+.p2:hover a{
+    display:block;
+    color: rgb(240,240,240);
+    box-sizing: border-box;
+    position: relative;
+    background:none;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.p2 span{
+    color:rgb(175, 47, 25);
+}.p3 a{
+    display:none;
+}
+.p3:hover a{
+    display:block;
+    color: rgb(240,240,240);
+    box-sizing: border-box;
+    position: relative;
+    background:none;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.p3 span{
+    color:rgb(175, 47, 25);
+}.p4 a{
+    display:none;
+}
+.p4:hover a{
+    display:block;
+    color: rgb(240,240,240);
+    box-sizing: border-box;
+    position: relative;
+    background:none;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.p4 span{
+    color:rgb(175, 47, 25);
+}.p5 a{
+    display:none;
+}
+.p5:hover a{
+    display:block;
+    color: rgb(240,240,240);
+    box-sizing: border-box;
+    position: relative;
+    background:none;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.p5 span{
+    color:rgb(175, 47, 25);
+}.p6 a{
+    display:none;
+}
+.p6:hover a{
+    display:block;
+    color: rgb(240,240,240);
+    box-sizing: border-box;
+    position: relative;
+    background:none;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.p6 span{
+    color:rgb(175, 47, 25);
+}
+.showme{
+    height: 60px;
+    width: fit-content;
+    background:rgb(21, 21, 71);
+    margin:auto;
+    margin-top: 30px;
+    border-radius: 2px;
+    padding-left: 10px;
+    box-sizing:border-box;
+    padding-top: 17px;
+    padding-right: 9px;
+
+    
+    
+}
+.showme:hover{
+    background:rgb(192, 17, 52)
+}
+.showme:hover a{
+    display:block;
+    color: rgb(240,240,240);
+    box-sizing: border-box;
+    position: relative;
+    background:none;
+    text-decoration: none;
+}
+.showme a {
+    text-decoration: none;
+    font-size: 29px;
+    background:none;
+    color: white;
+}
+.bottom{
+    height:100%;
+    width: 100%;
+    background:rgb(5, 17, 16);
+    margin-top: 50px;
+}
+.b1{
+    height: 80px;
+    width: 100%;
+    color: white;
+    font-size: 50px;
+    border: 1px;
+    background:none;
+
+}
+.b2{
+    height: 30px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    border: 1px;
+    background:none;
+
+}
+.b3{
+    height: 50px;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    border: 1px;
+    display:flex;
+    background:none;
+
+}
+.bb1{
+    width: fit-content;
+    height: fit-content;
+    border: 1px ;
+    font-family: sans-serif;
+    margin:auto;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 40px;
+    background:none;
+    font-size: 30px;
+    color:white
+}
+.bb1:hover{
+    padding-top: 15px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.b4{
+    height: 80px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    border: 1px;
+    background: transparent;
+    display: flex;
+    margin-top: 50px;
+
+}
+.b41{
+    background:none;
+    margin-left: 10px;
+}
