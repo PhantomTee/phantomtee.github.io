@@ -57,7 +57,7 @@
     padding:0;
   }
   .hero{
-    background:linear-gradient( 40deg,black 50%,#7c7c7c 50%);
+    background: #7c7c7c;
     
   }
   ::-webkit-scrollbar{
