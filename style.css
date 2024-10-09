@@ -4,7 +4,7 @@
 
   * {
     margin: 0;
-    color:white;
+    color:black;
     /* font-family: 'Quattrocento Sans', sans-serif; */
     font-family: andale mono, monospace;
   }
@@ -52,12 +52,12 @@
 
   /*The beginning of something great  */
   body{
-    background:#000000;
+    background:#fffff;
     margin:0;
     padding:0;
   }
   .hero{
-    background:linear-gradient( 40deg,black 50%,#B20600 50%);
+    background:linear-gradient( 40deg,black 50%,#7c7c7c 50%);
     
   }
   ::-webkit-scrollbar{
@@ -66,7 +66,7 @@
   }
   ::-webkit-scrollbar-thumb{
     width: 3px;
-    background: #B20600;
+    background: #7c7c7c;
   }
   nav{
     display:flex;
@@ -162,7 +162,7 @@
     padding:230px;
   }
   main span{
-    color:#B20600;
+    color:black;
     width:100%;
     text-align: center;
     font-size: 40px;
