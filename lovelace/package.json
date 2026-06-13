@@ -1,7 +1,7 @@
 {
-  "name": "agent-protocol-mantle",
+  "name": "lovelace",
   "version": "1.0.0",
-  "description": "Trustless AI agent payment protocol on Mantle Network Testnet",
+  "description": "Lovelace — Trustless AI Agent Protocol on Mantle Network Testnet",
   "scripts": {
     "compile": "hardhat compile",
     "deploy": "hardhat run scripts/deploy.js --network mantleSepolia",

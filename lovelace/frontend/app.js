@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Agent Protocol — Mantle Sepolia Frontend
-// Update CONTRACT_ADDRESS after deploying AgentProtocol.sol
+// Lovelace — Mantle Sepolia Frontend
+// Update CONTRACT_ADDRESS after deploying Lovelace.sol
 // ─────────────────────────────────────────────────────────────────────────────
 
 const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000"; // TODO: replace after deploy

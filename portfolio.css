@@ -307,7 +307,7 @@ nav {
 }
 .proj-link:hover { color: var(--white); }
 
-/* ══ FEATURED — Agent Protocol ══ */
+/* ══ FEATURED — Lovelace ══ */
 .proj-featured {
   grid-column: 1 / -1;
   display: grid;

@@ -6,9 +6,9 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
 /**
- * @title AgentProtocol
+ * @title Lovelace
  * @notice Trustless AI agent payment protocol on Mantle Network.
- *         Port of marchantdev/agent-protocol (Solana) to EVM.
+ *         Port of marchantdev/agent-protocol to Lovelace (Solana) to EVM.
  *
  * Flow:
  *   1. Agent calls registerAgent() with MNT stake
@@ -17,7 +17,7 @@ import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
  *   4. Client calls releasePayment() — or auto-release after timeout
  *   5. Client calls rateAgent() after finalization
  */
-contract AgentProtocol is ReentrancyGuard {
+contract Lovelace is ReentrancyGuard {
     using SafeERC20 for IERC20;
 
     // ─────────────────────────────────────────────────────────────

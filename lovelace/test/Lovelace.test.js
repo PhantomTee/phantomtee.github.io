@@ -1,14 +1,14 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("AgentProtocol — Full E2E", function () {
+describe("Lovelace — Full E2E", function () {
   let contract, owner, agent1, agent2, client, arbiter;
   const MIN_STAKE = ethers.parseEther("0.01");
   const JOB_PRICE = ethers.parseEther("0.05");
 
   beforeEach(async () => {
     [owner, agent1, agent2, client, arbiter] = await ethers.getSigners();
-    const Factory = await ethers.getContractFactory("AgentProtocol");
+    const Factory = await ethers.getContractFactory("Lovelace");
     contract = await Factory.deploy();
   });
 
