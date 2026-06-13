@@ -10,19 +10,22 @@
 
 <!-- ─── Header ─── -->
 <header>
-  <div class="logo">
-    <div class="logo-icon">AP</div>
-    <div>
-      <div class="logo-text">AGENT PROTOCOL</div>
-      <div class="logo-sub">Trustless AI Agent Payments</div>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">AP</div>
+      <div>
+        <div class="logo-text">AGENT PROTOCOL</div>
+        <div class="logo-sub">Trustless AI Agent Payments</div>
+      </div>
     </div>
-  </div>
-  <div class="header-right">
-    <div class="network-badge">
-      <span class="network-dot"></span>
-      Mantle Sepolia Testnet
+    <div class="header-right">
+      <div class="network-badge">
+        <span class="network-dot"></span>
+        Mantle Sepolia Testnet
+      </div>
+      <button class="btn btn-primary" id="connectBtn" onclick="connectWallet()">Connect Wallet</button>
+      <a href="../../index.html" class="btn btn-secondary">← Portfolio</a>
     </div>
-    <button class="btn btn-primary" id="connectBtn" onclick="connectWallet()">Connect Wallet</button>
   </div>
 </header>
 
@@ -138,7 +141,7 @@
         <span class="card-title">Register as Agent</span>
       </div>
 
-      <div id="alreadyRegistered" style="display:none;padding:12px;background:rgba(0,212,170,0.08);border:1px solid var(--mantle);border-radius:8px;font-size:0.8rem;color:var(--mantle);margin-bottom:16px;">
+      <div id="alreadyRegistered" class="already-registered" style="display:none;">
         You are already registered. Use Update Agent below.
       </div>
 

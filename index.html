@@ -1,128 +1,268 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<script src="doc.js" defer></script>
-    <title>Portfolio| Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phantom — Frontend & Web3 Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="hero">
-    <nav>
-    <div class="box">
-        <img src="./Images/Project Name.gltf" alt="" srcset="">
-    </div>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="xtan.html" target="_blank">About</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#cv"><button>Resume</button></a></li>
-    </ul>
-    </nav>
-    <main>
-   <span>Hi my name is</span>
-   <h1>Shuaib Thalhat.</h1>
-   <h3>I'm a Frontend Web Designer specializing in building and occasionally designing exceptional digital experiences. Currently, I'm focused on building accessible, responsive and easy-to use websites for my clients</h3>
-   <p><a href="#about"><button>Check Me Out &#x2193;</button></a></p>
-   </main>
-   </div>
-   <article>
-    <div class="num5">
-        <div class="no-use">
-        <span>01</span>
-        <span id="about">About Me</span>
-        <span></span>
-        <div class="writeup1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ratione autem. Aut nisi deserunt placeat perspiciatis amet minus voluptas consequuntur atque. Provident, eum corrupti sint soluta doloribus, voluptatibus similique excepturi minus, quos laborum explicabo minima? Sapiente amet, consequatur quaerat quis necessitatibus fugit? Similique, reiciendis. Ratione odio distinctio doloremque ab non.
-        </div>
-        </div>
-        <div class="img1">
-            <a 
-  class="book-container"
-  href="https://theoutstanding.dev/"
-  target="_blank"
-  rel="noreferrer noopener"
->
-  <div class="book">
-    <img
-      alt="Phantom"
-      src="./Images/img.jpg"
-      />
-  </div>
-</a>
-        </div>
-    </div>
-    <div class="num4">
-        <div class="img2">
-            <img src="./Images/wavey-fingerprint.svg" alt="" height="300px" width="300px">
-        </div>
-        <div class="no-use">
-            <span>02</span>
-            <span>My Philosophy</span>
-            <span></span>
-        <div class="writeup2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ratione autem. Aut nisi deserunt placeat perspiciatis amet minus voluptas consequuntur atque. Provident, eum corrupti sint soluta doloribus, voluptatibus similique excepturi minus, quos laborum explicabo minima? Sapiente amet, consequatur quaerat quis necessitatibus fugit? Similique, reiciendis. Ratione odio distinctio doloremque ab non.
-        </div>
-        </div>
-    </div> 
-    <div class="num3">
-        <div class="div1-5"></div>
-        <div class="div1-4"></div>
-        <div class="div1-3"></div>
-        <div class="div1-2"></div>
-        <div class="div1-1"></div>
-    </div>
-    <div class="num2"></div>
-    <div class="num1"></div>
-   </article>
-   <aside id="project">
-    <h1>My Projects</h1>
-    <div class="grid-box">
-        <div class="o"><span>01</span><div class="one"><h1>E-logical Game Guild</h1></div></div>
-        <div class="o"><span>02</span><div class="two"><h1>SteelGate Web3 Hub</h1></div></div>
-        <div class="o"><span>03</span><div class="three"><h1>E-logical Web3 Hub</h1></div></div>
-        <div class="o"><span>04</span><div class="four"><h1>Xtan Crypto</h1></div></div>
-        <div class="o"><span>05</span><div class="five"><a href="agent-protocol-mantle/frontend/index.html" target="_blank" style="text-decoration:none;color:inherit;"><h1>Agent Protocol — Mantle</h1></a></div></div>
-    </div>
-   </aside>
-   <footer>
-    <h1>Get In Touch</h1>
-    <p style="font-size: 30px;">
-        Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
 
-    </p>
-    <p style="font-size: 20px;">
-        <button>
-        <a href="mailto:shuaibthalhat54@gmail.com">
-        Say Hello
-        </a>
-    </button>
-    <button id="cv">
-        <a href="https://eu.docworkspace.com/d/sINfIiPmBAZLsyJcG">
-        My CV
-        </a>
-    </button>
-</p>
-<iframe src="../MyResume.pdf" frameborder="1" width="500" height="700"></iframe>
-   </footer>
-   <div class="links" id="demo">
-    <div class="social-link">
-        <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Github</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Telegram</a></li>
-        </ul>
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">PT</div>
+      <span class="nav-logo-name">Phantom</span>
+    </a>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#project">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="portfolio.html">Portfolio</a>
     </div>
-    <div class="gmail-link"><a href="mailto:shuaibthalhat54@gmail.com">shuaibthalhat54@gmail.com</a>
+    <a href="agent-protocol-mantle/frontend/index.html" target="_blank" class="btn btn-white">Agent Protocol →</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-label label">Frontend &amp; Web3 Developer</div>
+    <h1>
+      Building Interfaces<br />
+      <em>That Ship.</em>
+    </h1>
+    <p class="hero-body">
+      I'm Phantom — a frontend developer specializing in clean, accessible UIs
+      and on-chain applications. Currently building Agent Protocol on Mantle Network.
+    </p>
+    <div class="hero-cta">
+      <a href="#project" class="btn btn-white">View My Work</a>
+      <a href="agent-protocol-mantle/frontend/index.html" target="_blank" class="btn btn-outline">Agent Protocol dApp →</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Years Coding</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Projects Shipped</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Protocol on Mantle</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Protocol Fees</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="about-section" id="about">
+  <div class="wrap">
+    <hr class="section-divider" style="margin-top:0" />
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="about-label label">// 01 — About Me</div>
+        <h2 class="about-heading">Crafting interfaces<br />with purpose.</h2>
+        <p class="about-text">
+          I'm Shuaib Thalhat, a frontend web developer with a passion for building
+          exceptional digital experiences. From responsive portfolio sites to full
+          on-chain dApps, I focus on code that is clean, accessible, and actually ships.
+        </p>
+        <p class="about-text">
+          My latest project — Agent Protocol — is a trustless AI agent payment system
+          ported from Solana to Mantle Network Testnet, featuring on-chain escrow,
+          staking, and dispute resolution.
+        </p>
+        <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="mailto:teephantom6@gmail.com" class="btn btn-white">Say Hello</a>
+          <a href="https://eu.docworkspace.com/d/sINfIiPmBAZLsyJcG" target="_blank" class="btn btn-outline">View CV</a>
         </div>
-   </div>
+      </div>
+
+      <div class="about-right">
+        <div class="about-card">
+          <div class="about-card-label">Currently Working On</div>
+          <div class="about-card-value">Agent Protocol — Mantle Network Testnet</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-label">Stack</div>
+          <div class="about-card-value">HTML · CSS · JavaScript · Solidity · ethers.js</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-label">Specialization</div>
+          <div class="about-card-value">Frontend UI &amp; Web3 dApp Development</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-label">Open to</div>
+          <div class="about-card-value">Freelance projects &amp; hackathon collaborations</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-label">Location</div>
+          <div class="about-card-value">Remote · Available Worldwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ══ -->
+<section class="projects-section" id="project">
+  <div class="wrap">
+    <hr class="section-divider" style="margin-top:0" />
+    <div class="section-header">
+      <div>
+        <div class="label" style="margin-bottom:10px;">// 02 — Selected Work</div>
+        <h2 class="section-heading">Projects</h2>
+      </div>
+      <a href="portfolio.html" class="btn btn-outline">View All →</a>
+    </div>
+
+    <div class="project-list">
+
+      <a href="agent-protocol-mantle/frontend/index.html" target="_blank" class="project-item">
+        <span class="project-num">01</span>
+        <div class="project-info">
+          <div class="project-name">Agent Protocol — Mantle</div>
+          <div class="project-desc">Trustless AI agent payment protocol with escrow, staking &amp; dispute resolution on Mantle L2</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Solidity</span>
+          <span class="tag">ethers.js</span>
+          <span class="tag">Mantle</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </a>
+
+      <div class="project-item">
+        <span class="project-num">02</span>
+        <div class="project-info">
+          <div class="project-name">E-logical Game Guild</div>
+          <div class="project-desc">Web3 gaming guild hub with community features and on-chain integrations</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Web3</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+      <div class="project-item">
+        <span class="project-num">03</span>
+        <div class="project-info">
+          <div class="project-name">SteelGate Web3 Hub</div>
+          <div class="project-desc">Web3 community platform connecting builders and contributors in the ecosystem</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">Web3</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+      <div class="project-item">
+        <span class="project-num">04</span>
+        <div class="project-info">
+          <div class="project-name">E-logical Web3 Hub</div>
+          <div class="project-desc">Decentralized hub for e-logical community with wallet integration and governance</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+      <div class="project-item">
+        <span class="project-num">05</span>
+        <div class="project-info">
+          <div class="project-name">Xtan Crypto</div>
+          <div class="project-desc">Crypto project landing page with interactive UI and token information sections</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHILOSOPHY ══ -->
+<section class="philosophy-section">
+  <div class="wrap">
+    <hr class="section-divider" style="margin-top:0" />
+    <div class="philosophy-inner">
+      <div>
+        <div class="label" style="margin-bottom:16px;">// 03 — My Philosophy</div>
+        <h2 class="philosophy-heading">Ship fast.<br />Build clean.<br />Stay on-chain.</h2>
+        <p class="philosophy-text">
+          Good code is invisible — users never notice it working. Bad code is unmistakable.
+          I focus on writing interfaces that are fast, accessible, and maintainable —
+          whether it's a static portfolio or a trustless smart contract protocol.
+        </p>
+      </div>
+      <div class="philosophy-code">
+        <span class="c-green">// Phantom's principles</span><br />
+        <span class="c-blue">const</span> <span class="c-yellow">developer</span> = {<br />
+        &nbsp;&nbsp;name: <span class="c-orange">"Shuaib Thalhat"</span>,<br />
+        &nbsp;&nbsp;alias: <span class="c-orange">"Phantom"</span>,<br />
+        &nbsp;&nbsp;focus: [<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-orange">"clean UI"</span>,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-orange">"on-chain apps"</span>,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-orange">"zero protocol fees"</span>,<br />
+        &nbsp;&nbsp;],<br />
+        &nbsp;&nbsp;ships: <span class="c-blue">true</span>,<br />
+        };
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT / FOOTER ══ -->
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="label" style="margin-bottom:20px;">// 04 — Contact</div>
+      <h2 class="footer-heading">Let's build<br />something.</h2>
+      <p class="footer-sub">
+        My inbox is always open. Whether you have a project in mind
+        or just want to say hi — I'll get back to you.
+      </p>
+      <div class="footer-cta">
+        <a href="mailto:teephantom6@gmail.com" class="btn btn-white">Say Hello →</a>
+        <a href="https://eu.docworkspace.com/d/sINfIiPmBAZLsyJcG" target="_blank" class="btn btn-outline">View CV</a>
+      </div>
+    </div>
+
+    <div class="cv-wrapper">
+      <iframe src="../MyResume.pdf" title="Phantom CV"></iframe>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Shuaib Thalhat (Phantom)</span>
+      <div class="footer-socials">
+        <a href="#">Twitter</a>
+        <a href="#">Github</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Telegram</a>
+        <a href="mailto:teephantom6@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
