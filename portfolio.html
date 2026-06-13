@@ -1,61 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phantom — All Projects</title>
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
-    <div class="navbar">
-    <nav>
-        <ul>
-            <li>About</li>
-            <li>Work</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">PT</div>
+      <span class="nav-logo-name">Phantom</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="#">Work</a>
+      <a href="index.html#contact">Contact</a>
     </div>
-    <div class="container" >
-            <div class="one">Hey I am Phantom</div>
-            <br>
-            <div class="web">a web developer</div>
+    <a href="lovelace/frontend/index.html" target="_blank" class="btn btn-white">Lovelace →</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="port-hero">
+  <div class="wrap">
+    <div class="label" style="margin-bottom:22px;">// All Projects</div>
+    <h1>
+      Work That<br />
+      <em>Speaks Itself.</em>
+    </h1>
+    <p class="port-hero-body">
+      A collection of frontend builds, Web3 integrations, and experiments.
+      Each shipped, each real — from game guilds to on-chain protocols.
+    </p>
+    <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+      <a href="index.html#contact" class="btn btn-white">Work With Me</a>
+      <a href="index.html" class="btn btn-outline">← Back Home</a>
     </div>
-    <div class="blue">
-        <div class="these">These are some of my projects</div>
-        <hr style="width: 700px; background-color: white; margin-left: 150px;"><br><br>
-        <div class="picgrid">
-            <div class="picgrid1"><div class="pi1"></div><div class="p1"><a href="#"><span style="background:none;"><</span> TRIBUTE PAGE <span style="background:none;">/></span></a><br><span class="tri" style="background:none; color:  rgb(240, 240, 240);">TRIBUTE PAGE</span></div></div>
-            <div class="picgrid2"><div class="pi2"></div><div class="p2"><a href="#"><span style="background:none;"><</span> RANDOM QUOTE MACHINE <span style="background:none;">/></span></a><br><span class="tri" style="background:none; color:  rgb(240, 240, 240);">RANDOM QUOTE MACHINE</span></div></div>
-            <div class="picgrid3"><div class="pi3"></div><div class="p3"><a href="#"><span style="background:none;"><</span> JAVASCRIPT CALCULATOR <span style="background:none;">/></span></a><br><span class="tri" style="background:none; color:  rgb(240, 240, 240);">JAVASCRIPT CALCULATOR</span></div></div>
-            <div class="picgrid4"><div class="pi4"></div><div class="p4"><a href="#"><span style="background:none;"><</span> MAP DATA ACROSS THE GLOBE <span style="background:none;">/></span></a><br><span class="tri" style="background:none; color:  rgb(240, 240, 240);">MAP DATA ACROSS THE GLOBE</span></div></div>
-            <div class="picgrid5"><div class="pi5"></div><div class="p5"><a href="#"><span style="background:none;"><</span> WIKIPEDIA VIEWER <span style="background:none;">/></span></a><br><span class="tri" style="background:none; color:  rgb(240, 240, 240);">WIKIPEDIA VIEWER</span></div></div>
-            <div class="picgrid6"><div class="pi6"></div><div class="p6"><a href="#"><span style="background:none;"><</span> TIC TAC TOE GAME <span style="background:none;">/></span></a><br><span class="tri" style="background:none; color:  rgb(240, 240, 240);">TIC TAC TOE GAME</span></div></div>
+
+    <div class="port-hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">7+</div>
+        <div class="stat-label">Projects Listed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Web3 Builds</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Live Protocol</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECT GRID ══ -->
+<section class="port-section">
+  <div class="wrap">
+    <hr class="port-section-hr" />
+    <div class="port-header">
+      <div>
+        <div class="label" style="margin-bottom:8px;">// Selected Work</div>
+        <h2 class="port-heading">All Projects</h2>
+      </div>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- Featured: Agent Protocol -->
+      <a href="lovelace/frontend/index.html" target="_blank" class="proj-card proj-featured">
+        <div class="proj-img" style="background-image: url('');">
+          <div class="proj-img-placeholder">AGENT PROTOCOL</div>
         </div>
-        <div class="showme"><a href="#">Show all ></a></div>
-        <footer>
-            <div class="bottom">
-                <div class="b1" style="padding-left:250px; padding-top: 200px;">Let's work together...</div>
-                <div class="b2" style="font-style: italic; color:white; padding-left:300px;">How do you take your coffee?</div>
-                <div class="b3">
-                    <div class="bb1" style="margin-left:100px ;">Facebook</div>
-                    <div class="bb1">Github</div>
-                    <div class="bb1">Twitter</div>
-                    <div class="bb1">Send a mail</div>
-                    <div class="bb1">Call me</div>
-                </div>
-                <hr style="border: 2px solid rgb(194, 17, 52); margin-top: 80px;">
-                <div class="b4">
-                    <div class="b41">**This is just a fake portfolio. All the projects and contact details given are not real.</div>
-                    <div class="b41">© Created for freeCodeCamp </div>
-                </div>
-            </div>
-        </footer>
+        <div class="proj-body">
+          <div class="proj-featured-badge">
+            <span class="live-dot"></span> Live on Mantle Sepolia
+          </div>
+          <div class="proj-tag-row">
+            <span class="proj-tag">Solidity</span>
+            <span class="proj-tag">ethers.js</span>
+            <span class="proj-tag">Mantle L2</span>
+            <span class="proj-tag">Hackathon</span>
+          </div>
+          <div class="proj-title">Lovelace</div>
+          <div class="proj-desc">
+            Trustless AI agent payment protocol ported from Solana to Mantle Network Testnet.
+            Features on-chain escrow, agent staking, task delegation, and arbiter-based dispute resolution.
+            All 16 original instructions reproduced in Solidity — zero protocol fees.
+          </div>
+          <div class="proj-footer">
+            <span class="proj-link">Open dApp ↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <div class="proj-card">
+        <div class="proj-img" style="background-image: url('tribute.jpg');">
+          <div class="proj-img-placeholder" style="display:none;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag-row">
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span>
+          </div>
+          <div class="proj-title">Tribute Page</div>
+          <div class="proj-desc">
+            A clean, responsive tribute page built as part of the freeCodeCamp curriculum.
+            Focuses on semantic HTML and accessible layout.
+          </div>
+          <div class="proj-footer">
+            <span class="proj-link">View Project ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="proj-card">
+        <div class="proj-img" style="background-image: url('success.png');">
+          <div class="proj-img-placeholder" style="display:none;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag-row">
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">API</span>
+          </div>
+          <div class="proj-title">Random Quote Machine</div>
+          <div class="proj-desc">
+            Fetches and displays random quotes via an external API.
+            One-click sharing to Twitter. Built with vanilla JS.
+          </div>
+          <div class="proj-footer">
+            <span class="proj-link">View Project ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="proj-card">
+        <div class="proj-img" style="background-image: url('calc.png');">
+          <div class="proj-img-placeholder" style="display:none;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag-row">
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">Logic</span>
+          </div>
+          <div class="proj-title">JavaScript Calculator</div>
+          <div class="proj-desc">
+            Fully functional calculator with immediate execution logic,
+            keyboard support, and edge-case handling.
+          </div>
+          <div class="proj-footer">
+            <span class="proj-link">View Project ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="proj-card">
+        <div class="proj-img" style="background-image: url('map.jpg');">
+          <div class="proj-img-placeholder" style="display:none;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag-row">
+            <span class="proj-tag">D3.js</span>
+            <span class="proj-tag">Data Viz</span>
+          </div>
+          <div class="proj-title">Map Data Across the Globe</div>
+          <div class="proj-desc">
+            Interactive data visualization mapping global datasets using D3.js
+            and GeoJSON with zoom and tooltip interactions.
+          </div>
+          <div class="proj-footer">
+            <span class="proj-link">View Project ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="proj-card">
+        <div class="proj-img" style="background-image: url('wiki.png');">
+          <div class="proj-img-placeholder" style="display:none;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag-row">
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">Wikipedia API</span>
+          </div>
+          <div class="proj-title">Wikipedia Viewer</div>
+          <div class="proj-desc">
+            Search Wikipedia articles in real-time. Built with the
+            MediaWiki API, featuring live search and result rendering.
+          </div>
+          <div class="proj-footer">
+            <span class="proj-link">View Project ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="proj-card">
+        <div class="proj-img" style="background-image: url('tic-tac-toe.png');">
+          <div class="proj-img-placeholder" style="display:none;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag-row">
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">Game Logic</span>
+          </div>
+          <div class="proj-title">Tic Tac Toe Game</div>
+          <div class="proj-desc">
+            Classic Tic Tac Toe with a simple AI opponent and win detection.
+            Clean UI with smooth state transitions.
+          </div>
+          <div class="proj-footer">
+            <span class="proj-link">View Project ↗</span>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="port-footer">
+  <div class="wrap">
+    <div class="port-footer-top">
+      <div class="label" style="margin-bottom:16px;">// Let's Connect</div>
+      <h2 class="port-footer-heading">Let's work<br />together.</h2>
+      <p class="port-footer-sub">
+        Have a project in mind? Whether it's a Web3 dApp or a clean frontend —
+        I'd love to build it.
+      </p>
+      <div class="footer-cta">
+        <a href="mailto:teephantom6@gmail.com" class="btn btn-white">Say Hello →</a>
+        <a href="index.html" class="btn btn-outline">← Home</a>
+      </div>
+    </div>
+
+    <div class="port-footer-bottom">
+      <span class="footer-copy">© 2026 Shuaib Thalhat (Phantom)</span>
+      <div class="footer-socials">
+        <a href="#">Twitter</a>
+        <a href="#">Github</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

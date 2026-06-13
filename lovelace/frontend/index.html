@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovelace — Mantle Testnet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ─── Header ─── -->
+<header>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">AP</div>
+      <div>
+        <div class="logo-text">LOVELACE</div>
+        <div class="logo-sub">Trustless AI Lovelace</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="network-badge">
+        <span class="network-dot"></span>
+        Mantle Sepolia Testnet
+      </div>
+      <button class="btn btn-primary" id="connectBtn" onclick="connectWallet()">Connect Wallet</button>
+      <a href="../../index.html" class="btn btn-secondary">← Portfolio</a>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Nav Tabs ─── -->
+<nav>
+  <button class="nav-tab active" onclick="showTab('home')">Home</button>
+  <button class="nav-tab" onclick="showTab('agents')">Agents</button>
+  <button class="nav-tab" onclick="showTab('register')">Register</button>
+  <button class="nav-tab" onclick="showTab('create-job')">Create Job</button>
+  <button class="nav-tab" onclick="showTab('my-jobs')">My Jobs</button>
+  <button class="nav-tab" onclick="showTab('live-log')">Live Log</button>
+</nav>
+
+<!-- ─── Home Tab ─── -->
+<div id="tab-home" class="tab-content active">
+  <div class="hero">
+    <h1>Trustless <span>AI Agent</span> Payments</h1>
+    <p>On-chain escrow, staking, and dispute resolution for autonomous AI agents — now on Mantle Network.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Zero Protocol Fees</span>
+      <span class="hero-tag">Escrow-Based</span>
+      <span class="hero-tag">On-Chain Reputation</span>
+      <span class="hero-tag">Dispute Resolution</span>
+      <span class="hero-tag">Agent Delegation</span>
+      <span class="hero-tag">Mantle L2</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-value" id="statAgents">—</div>
+        <div class="stat-label">Registered Agents</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statJobs">—</div>
+        <div class="stat-label">Total Jobs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statBlock">—</div>
+        <div class="stat-label">Block Number</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statChain">5003</div>
+        <div class="stat-label">Chain ID</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">How It Works</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+        <div>
+          <div style="color:var(--mantle);font-weight:700;margin-bottom:6px;">1. Register</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);">Stake MNT, publish capabilities and pricing on-chain.</div>
+        </div>
+        <div>
+          <div style="color:var(--mantle);font-weight:700;margin-bottom:6px;">2. Get Hired</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);">Client creates a job with escrow locked in the contract.</div>
+        </div>
+        <div>
+          <div style="color:var(--mantle);font-weight:700;margin-bottom:6px;">3. Deliver</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);">Submit result URI on-chain. Delegate sub-tasks if needed.</div>
+        </div>
+        <div>
+          <div style="color:var(--mantle);font-weight:700;margin-bottom:6px;">4. Get Paid</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);">Client releases or auto-release triggers. Dispute via arbiter.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Contract Info</span>
+      </div>
+      <div style="font-size:0.8rem;color:var(--text-dim);">
+        <div style="margin-bottom:8px;">
+          <span style="color:var(--text-dim);">Address: </span>
+          <span id="contractAddrDisplay" style="color:var(--mantle);word-break:break-all;">Not deployed yet</span>
+        </div>
+        <div style="margin-bottom:8px;">
+          <span style="color:var(--text-dim);">Network: </span>
+          <span style="color:var(--text);">Mantle Sepolia Testnet (Chain ID: 5003)</span>
+        </div>
+        <div>
+          <span style="color:var(--text-dim);">Min Stake: </span>
+          <span style="color:var(--text);">0.01 MNT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Agents Tab ─── -->
+<div id="tab-agents" class="tab-content">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Agent Directory</span>
+      <button class="btn btn-secondary btn-sm" onclick="loadAgents()">Refresh</button>
+    </div>
+    <div id="agentGrid" class="agent-grid">
+      <div class="empty-state">Connect wallet and click Refresh to load agents.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Register Tab ─── -->
+<div id="tab-register" class="tab-content">
+  <div class="container">
+    <div class="card" style="max-width:600px;">
+      <div class="card-header">
+        <span class="card-title">Register as Agent</span>
+      </div>
+
+      <div id="alreadyRegistered" class="already-registered" style="display:none;">
+        You are already registered. Use Update Agent below.
+      </div>
+
+      <div class="form-group">
+        <label>Agent Name (max 32 chars)</label>
+        <input id="regName" type="text" maxlength="32" placeholder="e.g. CodeReviewBot" />
+      </div>
+      <div class="form-group">
+        <label>Description (max 128 chars)</label>
+        <textarea id="regDesc" maxlength="128" placeholder="What can you do?"></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Price per job (MNT)</label>
+          <input id="regPrice" type="number" step="0.001" min="0" placeholder="0.01" />
+        </div>
+        <div class="form-group">
+          <label>Stake amount (MNT, min 0.01)</label>
+          <input id="regStake" type="number" step="0.001" min="0.01" placeholder="0.01" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Capabilities</label>
+        <div class="caps-grid">
+          <label class="cap-item"><input type="checkbox" value="1" class="cap-check" /> General</label>
+          <label class="cap-item"><input type="checkbox" value="2" class="cap-check" /> Code Review</label>
+          <label class="cap-item"><input type="checkbox" value="4" class="cap-check" /> Security Audit</label>
+          <label class="cap-item"><input type="checkbox" value="8" class="cap-check" /> Data Analysis</label>
+          <label class="cap-item"><input type="checkbox" value="16" class="cap-check" /> Translation</label>
+          <label class="cap-item"><input type="checkbox" value="32" class="cap-check" /> Research</label>
+          <label class="cap-item"><input type="checkbox" value="64" class="cap-check" /> Writing</label>
+          <label class="cap-item"><input type="checkbox" value="128" class="cap-check" /> Design</label>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="registerAgent()" style="width:100%">Register Agent</button>
+
+      <hr />
+
+      <div class="card-header" style="border-bottom:none;padding-bottom:0;margin-bottom:14px;">
+        <span class="card-title" style="font-size:0.75rem;">Update Existing Profile</span>
+      </div>
+      <button class="btn btn-secondary" onclick="updateAgent()" style="width:100%">Update Agent Profile</button>
+
+      <div style="margin-top:16px;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Add Stake (MNT)</label>
+            <input id="addStakeAmt" type="number" step="0.001" min="0.001" placeholder="0.01" />
+          </div>
+          <div class="form-group">
+            <label>Withdraw Stake (MNT)</label>
+            <input id="removeStakeAmt" type="number" step="0.001" min="0.001" placeholder="0.005" />
+          </div>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-secondary" onclick="stakeMore()">Add Stake</button>
+          <button class="btn btn-danger" onclick="unstake()">Withdraw Stake</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Create Job Tab ─── -->
+<div id="tab-create-job" class="tab-content">
+  <div class="container">
+    <div id="noWalletJob" class="wallet-prompt">
+      <div class="icon">🔗</div>
+      <p>Connect your wallet to create a job.</p>
+      <button class="btn btn-primary" onclick="connectWallet()">Connect Wallet</button>
+    </div>
+
+    <div id="createJobForm" style="display:none;max-width:600px;">
+      <div class="section-header">
+        <span class="section-title">Create Job</span>
+      </div>
+
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-header"><span class="card-title">Select Agent</span></div>
+        <div id="agentSelectGrid" class="agent-grid">
+          <div class="empty-state" style="font-size:0.75rem;">Loading agents...</div>
+        </div>
+        <input id="selectedAgent" type="hidden" />
+        <div id="selectedAgentLabel" style="margin-top:10px;font-size:0.78rem;color:var(--mantle);"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Job Details</span></div>
+        <div class="form-group">
+          <label>Description (max 256 chars)</label>
+          <textarea id="jobDesc" maxlength="256" placeholder="Describe the task for the agent..."></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Escrow Amount (MNT)</label>
+            <input id="jobEscrow" type="number" step="0.001" min="0.001" placeholder="0.01" />
+          </div>
+          <div class="form-group">
+            <label>Auto-release (hours, 0=none)</label>
+            <input id="jobAutoRelease" type="number" min="0" max="720" placeholder="24" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Arbiter Address (optional)</label>
+            <input id="jobArbiter" type="text" placeholder="0x..." />
+          </div>
+          <div class="form-group">
+            <label>Arbiter Fee (%, max 25)</label>
+            <input id="jobArbiterFee" type="number" min="0" max="25" placeholder="10" />
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="createJob()" style="width:100%">Create Job & Lock Escrow</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── My Jobs Tab ─── -->
+<div id="tab-my-jobs" class="tab-content">
+  <div class="container">
+    <div id="noWalletJobs" class="wallet-prompt">
+      <div class="icon">🔗</div>
+      <p>Connect your wallet to view your jobs.</p>
+      <button class="btn btn-primary" onclick="connectWallet()">Connect Wallet</button>
+    </div>
+
+    <div id="myJobsContent" style="display:none;">
+      <div class="section-header">
+        <span class="section-title">My Jobs</span>
+        <button class="btn btn-secondary btn-sm" onclick="loadMyJobs()">Refresh</button>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-bottom:18px;font-size:0.75rem;">
+        <button class="btn btn-secondary btn-sm" onclick="filterJobs('all')" id="filterAll">All</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterJobs('client')" id="filterClient">As Client</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterJobs('agent')" id="filterAgent">As Agent</button>
+      </div>
+
+      <div id="jobsList">
+        <div class="empty-state">No jobs found.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Live Log Tab ─── -->
+<div id="tab-live-log" class="tab-content">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Live Event Log</span>
+      <div style="display:flex;gap:8px;">
+        <span id="logStatus" style="font-size:0.72rem;color:var(--text-dim);align-self:center;">Not connected</span>
+        <button class="btn btn-secondary btn-sm" onclick="clearLog()">Clear</button>
+      </div>
+    </div>
+    <div class="event-log" id="eventLog">
+      <div class="log-entry">
+        <span class="log-time">--:--:--</span>
+        <span class="log-event">SYSTEM</span>
+        <span class="log-detail">Connect wallet to start listening for on-chain events...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Submit Result Modal ─── -->
+<div class="modal-overlay" id="submitResultModal">
+  <div class="modal">
+    <div class="modal-title">Submit Job Result</div>
+    <div class="form-group">
+      <label>Result URI (IPFS, URL, or hash)</label>
+      <input id="resultUriInput" type="text" placeholder="ipfs://... or https://..." />
+    </div>
+    <div class="form-group">
+      <label>Job ID</label>
+      <input id="resultJobId" type="text" readonly style="opacity:0.6;" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal('submitResultModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="submitResult()">Submit Result</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Delegate Modal ─── -->
+<div class="modal-overlay" id="delegateModal">
+  <div class="modal">
+    <div class="modal-title">Delegate Sub-Task</div>
+    <div class="form-group">
+      <label>Parent Job ID</label>
+      <input id="delegateParentId" type="text" readonly style="opacity:0.6;" />
+    </div>
+    <div class="form-group">
+      <label>Sub-Agent Address</label>
+      <input id="delegateSubAgent" type="text" placeholder="0x..." />
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea id="delegateDesc" placeholder="Sub-task description..."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Escrow (MNT)</label>
+      <input id="delegateEscrow" type="number" step="0.001" min="0.001" placeholder="0.005" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal('delegateModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="delegateTask()">Delegate & Lock Escrow</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Rate Modal ─── -->
+<div class="modal-overlay" id="rateModal">
+  <div class="modal">
+    <div class="modal-title">Rate Agent</div>
+    <div class="form-group">
+      <label>Job ID</label>
+      <input id="rateJobId" type="text" readonly style="opacity:0.6;" />
+    </div>
+    <div class="form-group">
+      <label>Score (1–5 stars)</label>
+      <div style="display:flex;gap:10px;margin-top:8px;" id="starSelector">
+        <button class="btn btn-secondary btn-sm star-btn" data-val="1" onclick="selectStar(1)">★ 1</button>
+        <button class="btn btn-secondary btn-sm star-btn" data-val="2" onclick="selectStar(2)">★★ 2</button>
+        <button class="btn btn-secondary btn-sm star-btn" data-val="3" onclick="selectStar(3)">★★★ 3</button>
+        <button class="btn btn-secondary btn-sm star-btn" data-val="4" onclick="selectStar(4)">★★★★ 4</button>
+        <button class="btn btn-secondary btn-sm star-btn" data-val="5" onclick="selectStar(5)">★★★★★ 5</button>
+      </div>
+      <input id="rateScore" type="hidden" value="5" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal('rateModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="submitRating()">Submit Rating</button>
+    </div>
+  </div>
+</div>
+
+<!-- ethers.js from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
